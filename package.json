@@ -4,8 +4,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "build": "rm -r _static 2>/dev/null; node index.js; npm run build && mv build _static",
     "start": "node index.js; serve -s _static -l tcp://0.0.0.0:$PORT -n",
-    "build": "rm -r _static 2>/dev/null; node index.js; preact build && mv build _static",
     "dev": "preact watch",
     "lint": "eslint src",
     "test": "jest"
