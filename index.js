@@ -8,9 +8,7 @@ const PORT = process.env.PORT || 8080;
 
 app.get("/*", (req, resp) => {
     const resourcePath = req.path;
-    const publicDir = path.resolve(__dirname, "build");
-    const fullPath = path.resolve(publicDir, resourcePath)
-
+    const fullPath = path.join(__dirname, "build", resourcePath)
     resp.sendFile(fullPath);
 })
 
