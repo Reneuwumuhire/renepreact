@@ -1,0 +1,9 @@
+name: renepreact
+services:
+  - build_command: yarn build
+    environment_slug: node-js
+    github:
+      branch: main
+      deploy_on_push: true
+      repo: Reneuwumuhire/renepreact
+    name: renepreact
