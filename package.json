@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-     "start": "node sammy.js; serve -s _static -l tcp://0.0.0.0:$PORT -n",
-    "build": "rm -r _static 2>/dev/null; node sammy.js; preact build && mv build _static",
+     
+    "build": "preact build",
+    "serve": "sirv build --port 8080 --cors --single",
     "dev": "preact watch",
-    "lint": "eslint src",
-    "test": "jest"
+    "lint": "eslint src"
   },
   "eslintConfig": {
     "extends": "preact",
@@ -39,6 +39,6 @@
     ]
   },
   "engines": {
-    "yarn": "^0.14.0"
+    "yarn": "^1.22.10"
   }
 }
